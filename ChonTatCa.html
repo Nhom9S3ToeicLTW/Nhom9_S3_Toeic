@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Trang Chủ Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+	div.account{
+		padding: 0 10px 60px 0;
+	}
+	
+	div.img2 {
+		float: right;
+		margin:10px;
+	}
+	
+	
+	div.container {
+		margin: 0px;
+		width: 100%;
+	}
+	
+	div.admin {
+		background-color: #fff;
+		width: 100%;
+	}
+	
+	header {
+		background-color: orange;
+	}
+	
+	footer {
+		padding: 1em;
+		color: white;
+		background-color: orange;
+		clear: left;
+		text-align: center;
+	}
+	
+	div {
+		text-align: right;
+	}
+	
+	li {
+		float: left;
+		display:inline;
+	}
+	
+	.button1 {
+	  display: inline-block;
+	  padding: 10px 15px;
+	  font-size: 18px;
+	  cursor: pointer;
+	  text-align: center;
+	  text-decoration: none;
+	  outline: none;
+	  color: #fff;
+	  background-color: #4CAF50;
+	  border: none;
+	  border-radius: 10px;
+	  box-shadow: 0 9px #999;
+	}
+
+	.button1:hover {background-color: #3e8e41}
+
+	.button1:active {
+	  background-color: #3e8e41;
+	  box-shadow: 0 5px #666;
+	  transform: translateY(4px);
+	}
+	
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	td {
+		padding: 8px;
+		text-align: left;
+		border-bottom: 1px solid #ddd;
+	}
+	
+	tr:nth-child(even){background-color: #f2f2f2}
+  </style>
+
+</head>
+<body>
+
+<div class="container">
+
+<header>
+  <img src="img\icon_banner.png" alt="Icon_Banner" width="1330" height="100"></img>
+</header>
+
+<p></p>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="TrangChu.html">Trang chủ</a></li>
+		<li class="active"><a href="TrangChuAdmin.html">Trao đổi với người dùng</a></li>
+		<li><a href="LocUser.html">Lọc người dùng</a></li>
+		<li><a href="KhoaUser.html">Khóa tài khoản người dùng</a></li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+ 
+<div class="account">
+	<ul class="navbar-right" style="list-style-type:none;">
+        <li>
+            <div>
+                <div class="vbv2_root">
+                    <a href="#" class="orange">dlpt_admin</a>
+                </div>
+                <div><span class="glyphicon glyphicon-envelope"></span> Bạn có <a class="mess bg_mess_nmess" href="#"> <span class="badge">0</span>
+					</a> thông báo mới &nbsp; |&nbsp; 
+					<a href="TrangChu.html">Thoát</a></div> 
+                </div>                            
+        </li>
+            <li>
+                <a href="#"> <img src="icon\admin.png" width="50" height="50"></a>
+            </li>
+     </ul>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+	<div class="col-xs-6 col-md-2" style="background-color:white;">
+	<ul style="list-style-type:none;">
+        <li>
+			<a href="Soan.html" class="button1">Soạn</a>
+        </li>
+        <li>
+            <div><a href="#"><br><b>Hộp thư đến</a> <a class="mess bg_mess_nmess" href="#"> <span class="badge">0</span></b>
+					</a>&nbsp; 
+			</div>
+        </li>
+		<li>
+            <div><a href="#">Thư đã gửi</a> <a class="mess bg_mess_nmess" href="#"> <span class="badge">0</span>
+					</a>&nbsp; 
+			</div>
+        </li>
+		<li>
+            <div><a href="#">Thư nháp</a> <a class="mess bg_mess_nmess" href="#"> <span class="badge">0</span>
+					</a>&nbsp; 
+			</div>
+        </li>
+    </ul>
+	</div>
+	
+    <div class="col-xs-6 col-md-10" style="background-color:lavenderblush;">
+	<div class="container">
+		<div>
+			<div class="img2">
+			<a href="#">
+				<img src="icon\Previous.png" alt="Previous" style="width:50px;height:50px;border:0;">
+			</a>
+			<a href="#">
+				<img src="icon\Next.png" alt="Next" style="width:50px;height:50px;border:0;">
+			</a>
+			</div>
+			<a href="#" style="margin-top:10px; float:left;">
+				<img src="icon\checkbox2.png" alt="checkbox" style="width:50px;height:50px;border:0;">
+			</a>
+		</div>
+	<table>
+    <tbody>
+	  
+      <tr>
+        <td>
+			<label>
+			<input type="checkbox" checked>
+			</label>
+		</td>
+        <td>LyCan</td>
+        <td>toeicc123.com thực sự trở thành bạn đồng hành của tôi</td>
+		<td>14:00:00 23/09/2016</td>
+      </tr>
+	  <tr>
+        <td>
+			<label>
+			<input type="checkbox" checked>
+			</label>
+		</td>
+        <td>CaoTri</td>
+        <td>Quên mật khẩu. Hỗ trợ tôi lấy lại mật khẩu.</td>
+		<td>10:00:00 23/09/2016</td>
+      </tr>
+	  <tr>
+        <td>
+			<label>
+			<input type="checkbox" checked>
+			</label>
+		</td>
+        <td>ThanhPhuc</td>
+        <td>Tôi muốn nhiều hơn tài liệu học tập.</td>
+		<td>18:00:00 22/09/2016</td>
+      </tr>
+	  <tr>
+        <td>
+			<label>
+			<input type="checkbox" checked>
+			</label>
+		</td>
+        <td>ThuThao</td>
+        <td>Tôi muốn có nhiều bài test hơn nữa.</td>
+		<td>16:20:00 22/09/2016</td>
+      </tr>
+	  <tr>
+        <td>
+			<label>
+			<input type="checkbox" checked>
+			</label>
+		</td>
+        <td>HocChamChi</td>
+        <td>Tôi rất thích trang web này.</td>
+		<td>15:30:10 22/09/2016</td>
+      </tr>
+	  <tr>
+        <td>
+			<label>
+			<input type="checkbox" checked>
+			</label>
+		</td>
+        <td>FFFFAAA</td>
+        <td>Website cần hỗ trợ những chức năng khác.</td>
+		<td>16:20:00 22/09/2016</td>
+      </tr>
+	  <tr>
+        <td>
+			<label>
+			<input type="checkbox" checked>
+			</label>
+		</td>
+        <td>ThanhDong</td>
+        <td>Tôi muốn một hướng dẫn chi tiết hơn về chức năng quản lý tài liệu.</td>
+		<td>07:30:00 22/09/2016</td>
+      </tr>
+	  	  <tr>
+        <td>
+			<label>
+			<input type="checkbox" checked>
+			</label>
+		</td>
+        <td>ChiNguyen</td>
+        <td>Tôi muốn một hướng dẫn chi tiết hơn về chức năng quản học theo kế hoạch.</td>
+		<td>09:30:00 21/09/2016</td>
+      </tr>
+    </tbody>
+	</table>
+	</div>
+	</div> 
+	
+  </div>
+</div>
+
+<br>
+<footer>Copyright © toeic123.com</footer>
+
+</div>
+
+</body>
+</html>
