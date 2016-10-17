@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lọc User</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+	div.account{
+		padding: 0 10px 60px 0;
+	}
+	
+	div.container {
+		margin: 0px;
+		width: 100%;
+	}
+	
+	div.admin {
+		background-color: #fff;
+		width: 100%;
+	}
+	
+	header {
+		background-color: orange;
+	}
+	
+	footer {
+		padding: 1em;
+		color: white;
+		background-color: orange;
+		clear: left;
+		text-align: center;
+	}
+	
+	div {
+		text-align: right;
+	}
+	
+	li {
+		float: left;
+		display:inline;
+	}
+	
+	.button1 {
+	  display: inline-block;
+	  padding: 10px 15px;
+	  font-size: 18px;
+	  cursor: pointer;
+	  text-align: center;
+	  text-decoration: none;
+	  outline: none;
+	  color: #fff;
+	  background-color: #4CAF50;
+	  border: none;
+	  border-radius: 10px;
+	  box-shadow: 0 9px #999;
+	}
+
+	.button1:hover {background-color: #3e8e41}
+
+	.button1:active {
+	  background-color: #3e8e41;
+	  box-shadow: 0 5px #666;
+	  transform: translateY(4px);
+	}
+
+	.select-user
+	{
+		width:"150px";
+		margin: 0 auto;
+	}
+	
+	table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	td {
+		padding: 8px;
+		text-align: left;
+		border-bottom: 1px solid #ddd;
+	}
+	
+	th 
+	{
+		padding: 8px;
+		background-color:green;
+		color:white;
+		border-bottom: 1px solid #ddd;
+	}
+	
+	tr:nth-child(even){background-color: #f2f2f2}
+  </style>
+
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+
+<div class="container">
+
+<header>
+  <img src="img\icon_banner.png" alt="Icon_Banner" width="1330" height="100"></img>
+</header>
+
+<p></p>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="TrangChu.html">Trang chủ</a></li>
+		<li><a href="TrangChuAdmin.html">Trao đổi với người dúng</a></li>
+		<li class="active"><a href="LocUser.html">Lọc người dùng</a></li>
+		<li><a href="KhoaUser.html">Khóa tài khoản người dùng</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	
+<div class="container-fluid">
+  <div class="row">
+	<div class="col-xs-6 col-md-2" style="background-color:white;">
+	<ul style="list-style-type:none;">
+        <li>
+			<a href="#" class="button1">Lọc</a>
+        </li>
+        <li style="width:160px;">
+            <div class="select-user">
+				<br>
+			    <select id="country" class="form-control" >
+					<option>Username</option>
+			    	<option>Email</option>
+			        <option>Last Access Time</option>
+			    </select>
+	    	</div>
+        </li>	
+		<li style="width:160px;">
+			<br>
+           <input type="text" class="form-control" id="usr" placeholder="LyCan">
+        </li>
+    </ul>
+	</div>
+	
+    <div class="col-xs-6 col-md-10" style="background-color:lavenderblush;">
+	<div class="container">
+	<table>
+    <tbody>
+		<br>
+		<tr>
+	    <th>Username</th>
+	    <th>Email</th>
+		<th>Last Access Time<th>
+		</tr>
+	  <tr>
+	    <td><a href="AChiTietNguoiDung.html" style="color:black;">LyCan</a></td>
+	    <td>cannanglamroi@gmail.com</td>
+		<td>22/08/2016<td>
+	  </tr>
+	  <tr>
+	    <td>LyCan96</td>
+	    <td>can96@gmail.com</td>
+		<td>21/01/2016<td>
+	  </tr>
+	  <tr>
+	    <td>LyCanTayNguyen</td>
+	    <td>lycantn@gmail.com</td>
+		<td>30/07/2016<td>
+	  </tr>
+	  <tr>
+	    <td>LyCanLamDong</td>
+	    <td>lamdonglycan@gmail.com</td>
+		<td>19/12/2015<td>
+	  </tr>
+	  <tr>
+	    <td>LyCanZ</td>
+	    <td>ly96can@gmail.com</td>
+		<td>21/03/2015<td>
+	  </tr>
+	  <tr>
+	    <td>LyCanZZ</td>
+	    <td>ly96canzz@gmail.com</td>
+		<td>21/03/2015<td>
+	  </tr>
+	  <tr>
+	    <td>LyCanZZ96</td>
+	    <td>ly96canzzz@gmail.com</td>
+		<td>06/08/2015<td>
+	  </tr>
+	  <tr>
+	    <td>StudyLyCan</td>
+	    <td>ly96candd@gmail.com</td>
+		<td>25/01/2015<td>
+	  </tr>
+	  <tr>
+	    <td>StLyCanLN95</td>
+	    <td>lycanstudy@gmail.com</td>
+		<td>25/01/2015<td>
+	  </tr>
+    </tbody>
+	</table>
+	</div>
+	</div> 
+	
+  </div>
+</div>
+	
+<br>
+<footer>Copyright © toiec123.com</footer>
+
+</div>
+
+</body>
+</html>
