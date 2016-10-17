@@ -1,0 +1,16 @@
+div.container {
+	margin: 0px;
+	width: 100%;
+}
+
+header {
+	background-color: orange;
+}
+
+footer {
+	padding: 1em;
+	color: white;
+	background-color: orange;
+	clear: left;
+	text-align: center;
+}

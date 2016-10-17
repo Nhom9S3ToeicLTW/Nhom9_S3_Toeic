@@ -1,0 +1,18 @@
+div.img1 {
+float: right;
+margin:10px;    
+}
+
+div.img2 {
+float: right;
+margin:10px;
+}
+
+div.admin {
+background-color: #fff;
+width: 100%;
+}
+
+td{
+	text-align: left;
+}
