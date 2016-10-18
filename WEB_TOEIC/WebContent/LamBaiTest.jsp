@@ -1,0 +1,348 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Làm Bài Test Thử</title>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="resource/css/responsive.css" rel="stylesheet">
+<link rel="stylesheet" href="resource/css/container_header_footer.css">
+<link rel="stylesheet" href="resource/css/admin.css">
+<link rel="stylesheet" href="resource/css/button1.css">
+<link rel="stylesheet" type="text/css" href="resource/css/custom.css">
+<link rel="stylesheet" href="resource/css/quanlytailieu.css">
+<link rel="stylesheet" href="resource/css/modal.css">
+<link rel="stylesheet" href="resource/css/imgcenter.css">
+<script src="resource/js/bootstrap.min.js"></script>
+<script src="resource/js/jquery.prettyPhoto.js"></script>
+<script src="resource/js/jquery.isotope.min.js"></script>
+<script src="resource/js/wow.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="resource/css/countdown.css">
+<script src="resource/js/countdown.js"></script>
+
+<style>
+/*li {
+        float: left;
+        display:inline;
+    }*/
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td {
+	padding: 8px;
+	text-align: left;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td {
+	padding: 8px;
+	text-align: left;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2
+}
+</style>
+
+<script type="text/javascript">
+	var l = 0, r = 0, c = 0;
+	$(document).ready(function() {
+		$("#listen").click(function() {
+			$(".doc").hide();
+			$(".nghe").show();
+			if (l == 0)
+				$(".nghe").load("PhanNghe.jsp");
+			$("#read").css('background-color', 'green');
+			$("#listen").css('background-color', 'orange');
+			$("#nop").css('visibility', 'visible');
+			if (c == 0)
+				timer.start(1000);
+
+			l = 1;
+			c = 1;
+		});
+
+		$("#read").click(function() {
+			$(".nghe").hide();
+			$(".doc").show();
+			if (r == 0)
+				$(".doc").load("PhanDoc.jsp");
+			$("#listen").css('background-color', 'green');
+			$("#read").css('background-color', 'orange');
+			$("#nop").css('visibility', 'visible');
+
+			if (c == 0)
+				timer.start(1000);
+
+			r = 1;
+			c = 1;
+		});
+
+		$("#nop").click(function() {
+			$(".nghe").hide();
+			$(".doc").hide();
+			$(".nop").load("NopBai.jsp");
+			$("#listen").css('background-color', 'green');
+			$("#read").css('background-color', 'green');
+
+			timer.stop();
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<header>
+			<img src="img\icon_banner.png" alt="Icon_Banner" width="100%"
+				height="100%"></img>
+		</header>
+		<p></p>
+		<nav class="navbar navbar-inverse" data-spy="affix"
+			data-offset-top="100" role="banner">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#myNavbar">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="TrangChu.jsp">Trang chủ</a></li>
+						<li><a href="TrangChuUser.jsp">Upload tài liệu</a></li>
+						<li><a href="TaoBaiTest.jsp">Tạo bài test</a></li>
+						<li><a href="QuanLyTaiLieu.jsp">Quản lý tài liệu</a></li>
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">Quản lý tiến trình<span
+								class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="HocTheoKeHoach.jsp">Học theo kế hoạch</a></li>
+								<li class="active"><a href="LamBaiTest.jsp">Làm bài
+										test thử</a></li>
+							</ul></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-6 col-md-2"
+					style="background-color: white; float: center;">
+					<div class="dropdown user-pro-body">
+						<div>
+							<img src="icon\user.png" alt="user-img" class="img-circle"
+								style="width: 150px; height: 150px; margin-left: 20px;">
+						</div>
+						<a href="#" class="dropdown-toggle u-dropdown"
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false"
+							style="font-size: 20px; margin-left: 60px; margin-top: 40px">Account
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu animated flipInY">
+							<li><a href="UChiTietNguoiDung.jsp"><i class="ti-user"></i>Thông
+									tin tài khoản</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="TrangChu.jsp"> Logout</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="">Thông báo mới <span class="badge">0</span></a></li>
+						</ul>
+					</div>
+					<br>
+					<ul class="nav nav-sidebar arrow"
+						style="width: 200px; margin-left: 15px;">
+						<li><a href="#" class="button1"
+							style="margin-left: 30px; width: 100px;">Download</a></li>
+						<li><br> <a id="myBtn" href="#" class="button1"
+							style="margin-left: 30px; width: 100px;">Share</a></li>
+						<li><br>
+							<button id="nop" class="button1"
+								style="margin-left: 30px; width: 100px; visibility: hidden;">Nộp</button>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-xs-6 col-md-8"
+					style="background-color: lavenderblush;">
+					<div class="container">
+						<table>
+							<tbody>
+								<tr style="background-color: orange;">
+									<td>
+										<h3 style="float: left;">Full Test 1</h3>
+										<h3 style="float: right;">Questions 0/200</h3>
+									</td>
+								</tr>
+								<tr>
+									<td><h3 style="text-align: center;">
+											<div class="timer">
+												<span class="hour">00</span>:<span class="minute">00</span>:<span
+													class="second">00</span>
+											</div>
+										</h3></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table>
+							<tbody>
+								<tr>
+									<td>
+										<button id="listen" class="button1">Click vào để
+											thi phần nghe</button>
+									</td>
+									<td style="float: right">
+										<button id="read" class="button1"
+											style="background-color: #4CAF50;">Click vào để
+											thi phần đọc</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="nghe"></div>
+
+						<div class="doc"></div>
+
+						<div class="nop"></div>
+					</div>
+					<br>
+				</div>
+
+				<div class="col-xs-6 col-md-2" style="background-color: white;">
+					<div class="container" style="text-align: center;">
+						<h2>
+							Số lượng: <span class="badge">15</span>
+						</h2>
+						<input type="text" name="search" placeholder="Search..">
+						<p></p>
+						<ul style="list-style-type: none;">
+							<div class="container">
+								<div class="list-group"
+									style="text-align: center; high: 1000px;">
+									<a href="#" class="list-group-item active">test_1</a> <a
+										href="#" class="list-group-item">test_2</a> <a href="#"
+										class="list-group-item">test_3</a> <a href="#"
+										class="list-group-item">test_4</a> <a href="#"
+										class="list-group-item">test_5</a> <a href="#"
+										class="list-group-item">test_6</a> <a href="#"
+										class="list-group-item">test_7</a> <a href="#"
+										class="list-group-item">test_8</a> <a href="#"
+										class="list-group-item">test_9</a> <a href="#"
+										class="list-group-item">test_10</a> <a href="#"
+										class="list-group-item">test_11</a> <a href="#"
+										class="list-group-item">test_12</a> <a href="#"
+										class="list-group-item">test_13</a> <a href="#"
+										class="list-group-item">test_14</a> <a href="#"
+										class="list-group-item">test_15</a>
+								</div>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="myModal" class="modal">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<div class="well well-sm">
+						<form id="main-contact-form" class="contact-form"
+							name="contact-form" method="post" action="sendemail.php">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<fieldset>
+								<legend class="text-center">Share with another user</legend>
+
+								<!-- Name input-->
+								<div class="form-group">
+									<label class="col-md-3 control-label" for="name">Username:</label>
+									<div class="col-md-9">
+										<input id="name" name="name"
+											placeholder="Username of who you want to share"
+											class="form-control" required="required">
+									</div>
+								</div>
+
+								<!-- Message body -->
+								<div class="form-group">
+									<br> <br> <label class="col-md-3 control-label"
+										for="message">Your message:</label>
+									<div class="col-md-9">
+										<textarea class="form-control" id="message" name="message"
+											placeholder="Please enter your message here..." rows="3"
+											required="required"></textarea>
+									</div>
+								</div>
+
+								<!-- Form actions -->
+								<div class="form-group">
+									<div class="col-md-12 text-right">
+										<br> <br>
+										<button type="submit" class="btn btn-primary btn-lg"
+											required="required">Submit</button>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			// Get the modal
+			var modal = document.getElementById('myModal');
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("myBtn");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks the button, open the modal
+			btn.onclick = function() {
+				modal.style.display = "block";
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+
+			window.onload = function() {
+				timer.reset(8100);
+				timer.mode(0);
+			};
+		</script>
+		<br>
+		<footer class="margin-bottom:0px;margin-top:10px;">Copyright
+			© toeic123.com</footer>
+	</div>
+</body>
+</html>

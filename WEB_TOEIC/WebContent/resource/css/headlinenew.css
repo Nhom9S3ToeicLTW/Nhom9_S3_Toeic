@@ -1,0 +1,39 @@
+/* back to top */
+#back-top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ccc;
+}
+#back-top a {
+    width: 50px;
+    display: block;
+    text-align: center;
+    font: 11px/100% Arial,
+    Helvetica,
+    sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #bbb;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s
+}
+#back-top span {
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    display: block;
+    color: red;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s
+}
+#back-top span:before {
+    margin: 0;
+}
+#back-top a:hover span {
+    background-color: #222
+}

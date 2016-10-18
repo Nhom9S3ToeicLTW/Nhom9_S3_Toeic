@@ -1,0 +1,30 @@
+.carousel {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.carousel-caption {
+    top: 20%;
+}
+
+
+#slider {
+    clear: both;
+    position: relative;
+    max-height: 50%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.item {
+    display: none;
+    position: relative;
+    .transition(.6s ease-in-out left);
+}
